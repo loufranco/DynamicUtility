@@ -22,6 +22,8 @@
 		9AA006E917F8875800107FAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA006C817F8875800107FAA /* UIKit.framework */; };
 		9AA006F117F8875800107FAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AA006EF17F8875800107FAA /* InfoPlist.strings */; };
 		9AA006F317F8875800107FAA /* DynamicUtilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA006F217F8875800107FAA /* DynamicUtilityTests.m */; };
+		9AA006FE17F889BC00107FAA /* LDUInteractiveSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA006FD17F889BC00107FAA /* LDUInteractiveSegue.m */; };
+		9AA0070117F8C2B700107FAA /* LDUSlideBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0070017F8C2B700107FAA /* LDUSlideBehavior.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		9AA006EE17F8875800107FAA /* DynamicUtilityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DynamicUtilityTests-Info.plist"; sourceTree = "<group>"; };
 		9AA006F017F8875800107FAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9AA006F217F8875800107FAA /* DynamicUtilityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicUtilityTests.m; sourceTree = "<group>"; };
+		9AA006FC17F889BC00107FAA /* LDUInteractiveSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDUInteractiveSegue.h; sourceTree = "<group>"; };
+		9AA006FD17F889BC00107FAA /* LDUInteractiveSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDUInteractiveSegue.m; sourceTree = "<group>"; };
+		9AA006FF17F8C2B700107FAA /* LDUSlideBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDUSlideBehavior.h; sourceTree = "<group>"; };
+		9AA0070017F8C2B700107FAA /* LDUSlideBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDUSlideBehavior.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,10 @@
 				9AA006DA17F8875800107FAA /* LDUMainViewController.m */,
 				9AA006DC17F8875800107FAA /* LDUFlipsideViewController.h */,
 				9AA006DD17F8875800107FAA /* LDUFlipsideViewController.m */,
+				9AA006FC17F889BC00107FAA /* LDUInteractiveSegue.h */,
+				9AA006FD17F889BC00107FAA /* LDUInteractiveSegue.m */,
+				9AA006FF17F8C2B700107FAA /* LDUSlideBehavior.h */,
+				9AA0070017F8C2B700107FAA /* LDUSlideBehavior.m */,
 				9AA006DF17F8875800107FAA /* Images.xcassets */,
 				9AA006CB17F8875800107FAA /* Supporting Files */,
 			);
@@ -256,9 +266,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AA006D517F8875800107FAA /* LDUAppDelegate.m in Sources */,
+				9AA0070117F8C2B700107FAA /* LDUSlideBehavior.m in Sources */,
 				9AA006DB17F8875800107FAA /* LDUMainViewController.m in Sources */,
 				9AA006DE17F8875800107FAA /* LDUFlipsideViewController.m in Sources */,
 				9AA006D117F8875800107FAA /* main.m in Sources */,
+				9AA006FE17F889BC00107FAA /* LDUInteractiveSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

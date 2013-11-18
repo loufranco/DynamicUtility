@@ -10,4 +10,11 @@
 
 @interface LDUMainViewController : UIViewController <LDUFlipsideViewControllerDelegate>
 
+@property (strong, nonatomic) IBOutlet UISegmentedControl *uiStyleSegment;
+@property (strong, nonatomic) IBOutlet UIPanGestureRecognizer* panManualStyle;
+@property (strong, nonatomic) UIDynamicAnimator* animator;
+
+- (IBAction)onPan:(UIPanGestureRecognizer*)pan;
+- (IBAction)onSegmentChanged:(id)sender;
+
 @end
