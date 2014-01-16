@@ -14,7 +14,11 @@
 @property (strong, nonatomic) IBOutlet UIPanGestureRecognizer* panManualStyle;
 @property (strong, nonatomic) UIDynamicAnimator* animator;
 
+@property (strong, nonatomic) UIView *body;
+@property (strong, nonatomic) UIDynamicAnimator *gravityAnimator;
+
 - (IBAction)onPan:(UIPanGestureRecognizer*)pan;
 - (IBAction)onSegmentChanged:(id)sender;
+- (IBAction)onDemoGravity:(id)sender;
 
 @end

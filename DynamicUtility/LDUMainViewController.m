@@ -23,6 +23,19 @@
     return self;
 }
 
+-(void)addBodyView
+{
+    self.body = [[UIView alloc] initWithFrame:CGRectMake(155, 40, 10, 10)];
+    self.body.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:self.body];
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self addBodyView];
+}
+
 #pragma mark - Flipside View
 
 - (void)flipsideViewControllerDidFinish:(LDUFlipsideViewController *)controller
@@ -80,5 +93,44 @@
         [self setUpDynamics];
     }
 }
+
+- (IBAction)onDemoGravity:(id)sender {
+    [self onDemoGravity3:sender]; return;
+    self.body.center = CGPointMake(160, 50);
+    self.gravityAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.body]];
+    [self.gravityAnimator addBehavior:gravityBehavior];
+}
+
+- (IBAction)onDemoGravity2:(id)sender {
+    self.body.center = CGPointMake(160, 50);
+    self.gravityAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.body]];
+    [self.gravityAnimator addBehavior:gravityBehavior];
+    
+    UICollisionBehavior *viewIsBoundary = [[UICollisionBehavior alloc] initWithItems:@[self.body]];
+    viewIsBoundary.translatesReferenceBoundsIntoBoundary = YES;
+    [self.gravityAnimator addBehavior:viewIsBoundary];
+}
+
+
+- (IBAction)onDemoGravity3:(id)sender {
+    self.body.center = CGPointMake(160, 50);
+    self.body.transform = CGAffineTransformMakeRotation(M_PI/5.0);
+
+    self.gravityAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.body]];
+    [self.gravityAnimator addBehavior:gravityBehavior];
+    
+    UICollisionBehavior *viewIsBoundary = [[UICollisionBehavior alloc] initWithItems:@[self.body]];
+    viewIsBoundary.translatesReferenceBoundsIntoBoundary = YES;
+    [self.gravityAnimator addBehavior:viewIsBoundary];
+    
+    UIDynamicItemBehavior *itemBehavior = [[UIDynamicItemBehavior alloc] initWithItems:@[self.body]];
+    itemBehavior.elasticity = .8;
+    [self.gravityAnimator addBehavior:itemBehavior];
+}
+
+
 
 @end
